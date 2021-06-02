@@ -6,13 +6,13 @@ namespace Amogus
     public class Interpreter
     {
         private int _accumulator;
-        private Stack<int> _stack = new();
+        private readonly Stack<int> _stack = new();
 
-        private IList<string> _program;
+        private readonly IList<string> _program;
         private Action _selectedCommand;
         private int _pc;
-        private Dictionary<int, int> _loops = new();
-        private Random _random = new();
+        private readonly Dictionary<int, int> _loops = new();
+        private readonly Random _random = new();
 
         private void IncrementAccumulator()
         {
